@@ -11,6 +11,7 @@ import org.junit.runner.RunWith;
 import io.restassured.RestAssured;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.serenitybdd.rest.SerenityRest;
+import net.thucydides.core.annotations.Manual;
 
 @RunWith(SerenityRunner.class)
 public class FirstSerenityBDDRestAssuredTest {
@@ -19,32 +20,37 @@ public class FirstSerenityBDDRestAssuredTest {
 	public void getAllStudents() {
 
 		RestAssured.baseURI = "http://localhost:8080/student";
-		SerenityRest.given().when().get("/list").then().log().all().statusCode(200);		
+		SerenityRest.given().when().get("/list").then().log().all().statusCode(200);
 	}
-	
+
 	@Test
 	public void thisTestFails() {
 
 		RestAssured.baseURI = "http://localhost:8080/student";
-		SerenityRest.given().when().get("/list").then().log().all().statusCode(500);		
+		SerenityRest.given().when().get("/list").then().log().all().statusCode(500);
 	}
-	
+
 	@Ignore
 	@Test
 	public void thisTestSkipped() {
 	}
-	
+
 	@Test
 	public void thisTestThrowsError() {
 
-		System.out.println("This is an error -"+1/0);
+		System.out.println("This is an error -" + 1 / 0);
 	}
-	
-	
+
 	@Test
 	public void fileDoesntExist() throws FileNotFoundException {
-		
-		File file =new File("N://nofile.txt");
-		FileReader fileReader= new FileReader(file);
+
+		File file = new File("N://nofile.txt");
+		FileReader fileReader = new FileReader(file);
 	}
+
+	@Manual
+	@Test
+	public void thisIsManualTest() {
+	}
+
 }
