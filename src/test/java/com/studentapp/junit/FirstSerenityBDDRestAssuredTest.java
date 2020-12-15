@@ -12,10 +12,12 @@ import io.restassured.RestAssured;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Manual;
+import net.thucydides.core.annotations.Title;
 
 @RunWith(SerenityRunner.class)
 public class FirstSerenityBDDRestAssuredTest {
 
+	@Title("Title - get all students info ")
 	@Test
 	public void getAllStudents() {
 

@@ -3,9 +3,11 @@ package com.studentapp.junit;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import com.studentapp.testbase.TestBase;
+
 import io.restassured.RestAssured;
 
-public class JunitBDDRestAssuredTest {
+public class JunitBDDRestAssuredTest extends TestBase {
 
 	@Ignore
 	@Test
