@@ -14,6 +14,7 @@ import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Manual;
 import net.thucydides.core.annotations.Title;
 
+@Ignore
 @RunWith(SerenityRunner.class)
 public class FirstSerenityBDDRestAssuredTest {
 
